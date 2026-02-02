@@ -4,7 +4,7 @@ const again = document.getElementById("again");
 let software = [];
 let byCategory = new Map();
 
-fetch("./data/software.json")
+fetch(".software.json")
   .then(res => res.json())
   .then(data => {
     software = data;
@@ -44,3 +44,4 @@ function render(item) {
 }
 
 again.onclick = pick;
+

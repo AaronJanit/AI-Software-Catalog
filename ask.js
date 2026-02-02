@@ -14,7 +14,7 @@ if (askBtn) {
 }
 if (resultsEl) resultsEl.innerHTML = "<p>Loading software data…</p>";
 
-fetch("./data/software.json")
+fetch(".software.json")
   .then(res => {
     if (!res.ok) throw new Error(res.statusText || 'Failed to load');
     return res.json();
@@ -110,3 +110,4 @@ function render(items) {
     resultsEl.appendChild(div);
   });
 }
+

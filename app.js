@@ -15,7 +15,7 @@ let state = {
 
 /* ---------- LOAD & INDEX ---------- */
 
-fetch("./data/software.json")
+fetch(".software.json")
   .then(res => res.json())
   .then(data => {
     software = data;
@@ -262,3 +262,4 @@ function escapeHtml(text) {
 search.addEventListener("input", e => {
   renderSearchResults(e.target.value);
 });
+

@@ -2,10 +2,10 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const fs = require("fs");
 
-fetch("./data/software.json")
+fetch(".software.json")
 
 async function run() {
-  const res = await fetch("./data/software.json", {
+  const res = await fetch(".software.json", {
     headers: {
       "Accept": "application/vnd.github.v3+json",
       "User-Agent": "software-catalog"
@@ -73,3 +73,4 @@ console.log(`Saved ${results.length} tools to data/awesome-ai-tools.json`);
 run().catch(err => {
   console.error("Fatal error:", err);
 });
+
